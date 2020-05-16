@@ -1,0 +1,9 @@
+<script src="{{ url("JS/bootstrap.js") }}"> </script>
+<script src="{{ url("JS/slideshow.js") }}"> </script>
+<script src="{{ url("JS/passwordConfimation.js")}}"> </script>
+<script src="{{ url("JS/masuk.js") }}"> </script>
+<script src="{{ url("JS/admin.js") }}"> </script>
+<script src="{{ url("JS/modal.js") }}"> </script>
+<script src="{{ url("JS/tambah.js") }}"> </script>
+<script src="{{ url("JS/addToBox.js") }}"> </script>
+<script src="{{ url("JS/getValue.js") }}"> </script>

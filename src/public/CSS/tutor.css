@@ -1,0 +1,58 @@
+.Tutor {
+    /*display: inline-block;*/
+    /*margin: 0 auto;*/
+    background-color: white;
+    margin-top: 10%;
+    margin-left: 25%;
+    border-radius: 3px;
+    width: 50%;
+}
+
+.Tutor h1 {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.tabelTutor {
+    margin-left: 10%;
+    width: 80%;
+    background-color: white;
+    /*table-layout: fixed;*/
+    border-collapse: separate;
+    border-radius: 6px;
+}
+
+.tabelTutor td, .tabelTutor th {
+    vertical-align: top;
+    /* padding-left: 2%; */
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.tabelTutor td {
+    padding-left: 1%;
+}
+
+.sempit {
+    width: 30%;
+}
+
+.tabelTutor td:last-child {
+    width: 40%;
+}
+
+.btnTmbhTutor {
+    margin-left: 43%;
+    border: none;
+    border-radius: 6px;
+    background-color: #2A4757;
+    color: white;
+    padding: 0.6%;
+    margin-bottom: 2%;
+}
+
+.btnTmbhTutor:hover {
+    cursor: pointer;
+    
+}
