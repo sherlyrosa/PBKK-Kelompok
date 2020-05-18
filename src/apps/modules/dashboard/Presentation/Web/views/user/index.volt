@@ -29,7 +29,7 @@
                         <input id="signUp" placeholder="Address" name="alamat" type="text" required>
                         <input id="signUp" placeholder="Email" name="email" type="email" required>
                         <input id="signUp" placeholder="Password" name="password" type="password" required>
-                        <select style="width: 80%; border: none; border-bottom: 1px solid lightgray; outline: none; margin-top: 2%; margin-bottom: 2%;">
+                        <select style="width: 80%; border: none; border-bottom: 1px solid lightgray; outline: none; margin-top: 2%; margin-bottom: 2%;" name="jk">
                             <option value="L" selected>Laki-laki</option>
                             <option value="P">Perempuan</option>
                         </select>

@@ -21,9 +21,6 @@
                 <tr>
                     <th>Nama Mentor</th>
                     <th>Nama User</th>
-                    <th>Mata Pelajaran</th>
-                    <th>Hari</th>
-                    <th>Jam</th>
                     <th>Pembayaran</th>
                     <th>Accept</th>
                 </tr>
@@ -36,11 +33,8 @@
                             <input type="hidden" name="email" value="{{ list.getEmail() }}">
                             <td>{{ list.getIdm() }}</td>
                             <td>{{ list.getEmail() }}</td>
-                            <td>{{ list.getMatpel() }}</td>
-                            <td>{{ list.getJadwal() }}</td>
-                            <td>{{ list.getJadwal() }}</td>
-                            <td><img class="buktibayar" src="{{ url("") }}" ></td> 
-                            <td><button type="button" class="btn">Accept</button> </td>
+                            <td><img class="buktibayar" src="{{ url(list.getBukti()) }}" style="height: 200px;"></td> 
+                            <td><button type="submit" class="btn btn-primary">Accept</button> </td>
                         </tr>
                     </form>
                 {% endfor %}

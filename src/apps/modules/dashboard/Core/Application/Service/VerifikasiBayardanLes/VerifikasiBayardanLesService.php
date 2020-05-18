@@ -13,7 +13,7 @@ class VerifikasiBayardanLesService
         $this->lesRepository = $lesRepository;
     }
 
-    public function execute(VerfikasiBayardanLesRequest $request)
+    public function execute(VerifikasiBayardanLesRequest $request)
     {
         $idm = $request->getIdm();
         $email = $request->getEmail();

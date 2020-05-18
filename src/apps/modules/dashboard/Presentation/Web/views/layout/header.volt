@@ -6,6 +6,9 @@
 <link href="{{ url("public/CSS/signup.css") }}" rel="stylesheet">
 <link href="{{ url("public/CSS/signin.css") }}" rel="stylesheet">
 <link href="{{ url("public/CSS/navbara.css") }}" rel="stylesheet">
+<link href="{{ url("public/CSS/howto.css") }}" rel="stylesheet">
+<link href="{{ url("public/CSS/submission.css") }}" rel="stylesheet">
+<link href="{{ url("public/CSS/pilihmentor.css") }}" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">

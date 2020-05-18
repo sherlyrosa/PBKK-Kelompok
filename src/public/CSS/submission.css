@@ -1,0 +1,11 @@
+#paketBox {
+    width: 15%;
+    text-align: center;
+    border: 2px solid lightgray;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#hov:hover {
+    background-color: #DCDCDC;
+}

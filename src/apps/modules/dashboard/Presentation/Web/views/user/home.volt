@@ -2,11 +2,11 @@
 {% block navbarCont %}
     <nav class="navbar navbar-expand-lg navbar-light py-1" style="background-color: white; padding-left: 4%;">
         <div class="mr-auto">
-            <a class="navbar-brand active2" id="navbarA" href="#">Home</a>
-            <a class="navbar-brand" id="navbarA" href="{{ url('dashboard/user/submission') }}">Submission</a>
-            <a class="navbar-brand" id="navbarA" href="{{ url('dashboard/user/howto') }}">How To</a>
-            <a class="navbar-brand" id="navbarA" href="{{ url('dashboard/user/contactus') }}">Contact Us</a>
-            <a class="navbar-brand" id="navbarA" href="{{ url('dashboard/user/mycourse') }}">My Course</a>
+            <a class="navbar-brand active2" id="navbarA" href="#" style="color: #85898A;">Home</a>
+            <a class="navbar-brand" id="navbarA" href="{{ url('dashboard/user/submission') }}" style="color: #85898A;">Submission</a>
+            <a class="navbar-brand" id="navbarA" href="{{ url('dashboard/user/howto') }}" style="color: #85898A;">How To</a>
+            <a class="navbar-brand" id="navbarA" href="{{ url('dashboard/user/contactus') }}" style="color: #85898A;">Contact Us</a>
+            <a class="navbar-brand" id="navbarA" href="{{ url('dashboard/user/mycourse') }}" style="color: #85898A;">My Course</a>
         </div>
         <div class="ml-auto" style="width: 16%; text-align: right;">
             <a class="btn" style="background-color: #26405B; color: white; padding-left: 10%; padding-right: 10%;" href="{{ url('dashboard/user/signOut') }}">Sign Out</a>

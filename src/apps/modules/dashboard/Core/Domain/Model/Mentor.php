@@ -52,7 +52,7 @@ class Mentor
 
     public function getReview()
     {
-        return ($this->reviewVal / $this->reviewCnt);
+        return number_format($this->reviewVal / $this->reviewCnt, 2);
     }
 
     public function getJadwal()

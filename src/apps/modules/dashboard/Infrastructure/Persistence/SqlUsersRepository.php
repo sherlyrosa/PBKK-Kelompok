@@ -53,4 +53,19 @@ class SqlUsersRepository implements UsersRepository
             'usersType' => $usersType
         ]);
     }
+
+    public function register($nama, $email, $password, $umur, $jk, $alamat, $nohp, $usersType)
+    {
+        $sql = "INSERT INTO Users(nama, email, password, umur, jk, alamat, nohp, usersType) VALUES(:nama, :email, :password, :umur, :jk, :alamat, :nohp, :usersType)";
+        $this->db->query($sql, [
+            'nama' => $nama,
+            'email' => $email,
+            'password' => $password,
+            'umur' => $umur,
+            'jk' => $jk,
+            'alamat' => $alamat,
+            'nohp' => $nohp,
+            'usersType' => $usersType
+        ]);
+    }
 }

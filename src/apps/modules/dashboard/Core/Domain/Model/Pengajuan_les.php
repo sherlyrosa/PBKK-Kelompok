@@ -6,17 +6,17 @@ class Pengajuan_les
 {
     private $idm;
     private $email;
-    private $matpel;
-    private $jadwal;
     private $statusBayar;
+    private $unggah;
+    private $bukti;
 
-    public function __construct($idm, $email, $matpel, $jadwal, $statusBayar)
+    public function __construct($idm, $email, $statusBayar, $unggah, $bukti)
     {
         $this->idm = $idm;
         $this->email = $email;
-        $this->matpel = $matpel;
-        $this->jadwal = $jadwal;
         $this->statusBayar = $statusBayar;
+        $this->unggah = $unggah;
+        $this->bukti = $bukti;
     }
 
     public function getIdm()
@@ -29,18 +29,18 @@ class Pengajuan_les
         return $this->email;
     }
 
-    public function getMatpel()
-    {
-        return $this->matpel;
-    }
-
-    public function getJadwal()
-    {
-        return $this->jadwal;
-    }
-
     public function getStatusBayar()
     {
         return $this->statusBayar;
+    }
+
+    public function getUnggah()
+    {
+        return $this->unggah;
+    }
+
+    public function getBukti()
+    {
+        return $this->bukti;
     }
 }

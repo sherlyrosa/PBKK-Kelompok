@@ -21,10 +21,12 @@ class LoginService
         $usersType = $request->getUsersType();
         try {
             $users = $this->usersRepository->findByEmail($email, $password, $usersType);
+
             if($users->isExist())
             {
                 return new LoginResponse('Successfully Login', $users);
             }
+
             return new LoginResponse('Wrong Credential', NULL, TRUE);
         } catch (\Exception $exception) {
             return new LoginResponse($exception->getMessage(), NULL, TRUE);

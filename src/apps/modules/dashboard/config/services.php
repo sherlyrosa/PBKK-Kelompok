@@ -14,7 +14,10 @@ use Its\Example\Dashboard\Core\Application\Service\FindMentorById\FindMentorById
 use Its\Example\Dashboard\Core\Application\Service\UpdateMentor\UpdateMentorService;
 use Its\Example\Dashboard\Core\Application\Service\VerifikasiBayardanLes\VerifikasiBayardanLesService;
 use Its\Example\Dashboard\Core\Application\Service\ViewAllPengajuan\ViewAllPengajuanService;
-
+use Its\Example\Dashboard\Core\Application\Service\UserRegister\UserRegisterService;
+use Its\Example\Dashboard\Core\Application\Service\Pengajuan\PengajuanService;
+use Its\Example\Dashboard\Core\Application\Service\CheckPengajuan\CheckPengajuanService;
+use Its\Example\Dashboard\Core\Application\Service\UnggahBukti\UnggahBuktiService;
 $di['view'] = function () {
     $view = new View();
     $view->setViewsDir(__DIR__ . '/../Presentation/Web/views/');
@@ -87,4 +90,20 @@ $di->setShared('verifikasiBayardanLesService', function() use ($di) {
 
 $di->setShared('viewAllPengajuanService', function() use ($di) {
     return new ViewAllPengajuanService($di->get('sqlLesRepository'));
+});
+
+$di->setShared('userRegisterService', function() use ($di) {
+    return new UserRegisterService($di->get('sqlUsersRepository'));
+});
+
+$di->setShared('pengajuanService', function() use ($di) {
+    return new PengajuanService($di->get('sqlLesRepository'));
+});
+
+$di->setShared('checkPengajuanService', function() use ($di) {
+    return new CheckPengajuanService($di->get('sqlLesRepository'));
+});
+
+$di->setShared('unggahBuktiService', function() use ($di) {
+    return new UnggahBuktiService($di->get('sqlLesRepository'));
 });
