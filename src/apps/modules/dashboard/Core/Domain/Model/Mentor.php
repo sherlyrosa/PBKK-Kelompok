@@ -55,6 +55,16 @@ class Mentor
         return number_format($this->reviewVal / $this->reviewCnt, 2);
     }
 
+    public function getReviewCnt()
+    {
+        return $this->reviewCnt;
+    }
+
+    public function getReviewVal()
+    {
+        return $this->reviewVal;
+    }
+
     public function getJadwal()
     {
         return $this->jadwal;

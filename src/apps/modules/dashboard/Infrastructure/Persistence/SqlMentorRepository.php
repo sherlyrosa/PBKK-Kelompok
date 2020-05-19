@@ -98,4 +98,17 @@ class SqlMentorRepository implements MentorRepository
 
         return $mentor;
     }
+
+    public function rate($idm, $reviewCnt, $reviewVal) 
+    {
+        $sql = "UPDATE Mentor
+                SET reviewCnt = :reviewCnt, reviewVal = :reviewVal
+                WHERE idm = :idm";
+
+        $this->db->query($sql, [
+            'reviewCnt' => $reviewCnt,
+            'reviewVal' => $reviewVal,
+            'idm' => $idm
+        ]);
+    }
 }

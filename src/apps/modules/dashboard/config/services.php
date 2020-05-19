@@ -18,6 +18,9 @@ use Its\Example\Dashboard\Core\Application\Service\UserRegister\UserRegisterServ
 use Its\Example\Dashboard\Core\Application\Service\Pengajuan\PengajuanService;
 use Its\Example\Dashboard\Core\Application\Service\CheckPengajuan\CheckPengajuanService;
 use Its\Example\Dashboard\Core\Application\Service\UnggahBukti\UnggahBuktiService;
+use Its\Example\Dashboard\Core\Application\Service\RiwayatLes\RiwayatLesService;
+use Its\Example\Dashboard\Core\Application\Service\RateMentor\RateMentorService;
+
 $di['view'] = function () {
     $view = new View();
     $view->setViewsDir(__DIR__ . '/../Presentation/Web/views/');
@@ -106,4 +109,12 @@ $di->setShared('checkPengajuanService', function() use ($di) {
 
 $di->setShared('unggahBuktiService', function() use ($di) {
     return new UnggahBuktiService($di->get('sqlLesRepository'));
+});
+
+$di->setShared('riwayatLesService', function() use($di) {
+    return new RiwayatLesService($di->get('sqlLesRepository'));
+});
+
+$di->setShared('rateMentorService', function() use ($di) {
+    return new RateMentorService($di->get('sqlMentorRepository'));
 });

@@ -107,7 +107,7 @@ class SqlLesRepository implements LesRepository
                 INNER JOIN pengajuan_les
                 ON mentor.idm = pengajuan_les.idm
                 WHERE email = :email and statusBayar = '1'";
-        $result = $sql->db->fetchAll($sql, \Phalcon\Db\Enum::FETCH_ASSOC, [
+        $result = $this->db->fetchAll($sql, \Phalcon\Db\Enum::FETCH_ASSOC, [
             'email' => $email
         ]);
 

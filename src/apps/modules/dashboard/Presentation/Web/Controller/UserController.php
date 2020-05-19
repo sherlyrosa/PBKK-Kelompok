@@ -7,6 +7,7 @@ use Its\Example\Dashboard\Core\Domain\Model\Users;
 use Its\Example\Dashboard\Core\Application\Service\UserRegister\UserRegisterRequest;
 use Its\Example\Dashboard\Core\Application\Service\Login\LoginRequest;
 use Its\Example\Dashboard\Core\Application\Service\UnggahBukti\UnggahBuktiRequest;
+use Its\Example\Dashboard\Core\Application\Service\RateMentor\RateMentorRequest;
 
 class UserController extends Controller
 {
@@ -16,6 +17,8 @@ class UserController extends Controller
     protected $pengajuanService;
     protected $checkPengajuanService;
     protected $unggahBuktiService;
+    protected $riwayatLesService;
+    protected $rateMentorService;
 
     public function initialize()
     {
@@ -25,6 +28,8 @@ class UserController extends Controller
         $this->pengajuanService = $this->getDI()->get('pengajuanService');
         $this->checkPengajuanService = $this->getDI()->get('checkPengajuanService');
         $this->unggahBuktiService = $this->getDI()->get('unggahBuktiService');
+        $this->riwayatLesService = $this->getDI()->get('riwayatLesService');
+        $this->rateMentorService = $this->getDI()->get('rateMentorService');
     }
 
     public function indexAction()
@@ -140,7 +145,26 @@ class UserController extends Controller
 
     public function mycourseAction()
     {
-        
+        if($this->request->isPost())
+        {
+            $idm = $this->request->getPost('idm');
+            $rate = $this->request->getPost('star');
+            $val = $this->request->getPost('val') + $rate;
+            $cnt = $this->request->getPost('cnt') + 1;
+
+            $response = $this->rateMentorService->execute(new RateMentorRequest($idm, $cnt, $val));
+            if($response->getError())
+            {
+                echo $response->getMessage();
+            }
+            else
+            {
+                return $this->response->redirect('dashboard/user/mycourse');
+            }
+        }
+        $email = $this->session->get('user')['email'];
+        $riwayat = $this->riwayatLesService->execute($email);
+        $this->view->setVar('riwayat', $riwayat);
     }
 
     public function signOutAction()

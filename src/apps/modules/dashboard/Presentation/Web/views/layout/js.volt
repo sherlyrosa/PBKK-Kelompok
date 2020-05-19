@@ -7,3 +7,4 @@
 <script src="{{ url("JS/tambah.js") }}"> </script>
 <script src="{{ url("JS/addToBox.js") }}"> </script>
 <script src="{{ url("JS/getValue.js") }}"> </script>
+<script src="{{ url("JS/rating.js") }}"> </script>

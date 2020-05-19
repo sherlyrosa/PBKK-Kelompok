@@ -11,4 +11,5 @@ interface MentorRepository
     public function update($idm, $nama, $jadwal, $matpel, $pengalaman);
     public function delete($idm);
     public function findById($idm) : Mentor;
+    public function rate($idm, $reviewCnt, $reviewVal);
 }
